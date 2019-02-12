@@ -1,0 +1,19 @@
+<%- include('../partials/header') %>
+<div class="post-cards">
+<% for (let cluck of clucks) { %>
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="card-title">
+          <img class="small-image" src="../../images/userimage.jpg">
+          <p><%= cluck.username %> • <%= cluck.created_at %></p>
+        </div>
+        <p class="card-text"><%= cluck.content %></p> 
+        <% if ( cluck.image_url ) { %>
+          <img src="<%= cluck.image_url %>">
+        <% } %>
+      </div>
+    </div>
+</div>
+<% } %>
+<%- include('../partials/footer') %>
+

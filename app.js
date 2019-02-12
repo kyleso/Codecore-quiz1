@@ -9,8 +9,10 @@ const app = express();
 // View Engine
 app.set('view engine', 'ejs');
 
-// Middleware
+// Path
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Middleware
 app.use(logger('dev'));
 app.use(express.urlencoded({ extended: true }));
 
@@ -35,9 +37,9 @@ app.use((request, response, next) => {
 	next();
 });
 
-// Routers
-// const clucksRouter = require('./routes/clucksRouter');
-// app.use('/clucks', clucksRouter);
+// Routes
+const clucksRouter = require('./routes/clucksRouter');
+app.use('/clucks', clucksRouter);
 
 const baseRouter = require('./routes/baseRouter');
 app.use('/', baseRouter);

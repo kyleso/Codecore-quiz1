@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 router.post('/sign_in', (req, res) => {
 	const params = req.body;
 	res.cookie('username', params.username, { maxAge: COOKIE_MAX_AGE });
-	res.redirect('/');
+	res.redirect('/clucks');
 });
 
 router.post('/sign_out', (req, res) => {
