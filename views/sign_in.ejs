@@ -1,6 +1,15 @@
 <%- include("./partials/header") %>
-<h1>Welcome</h1>
 
-<form action="/sign_in" method="POST" class="form-inline">
-</form>
+  <div class="card mb-4">
+    <div class="card-body">
+    <h4 class="card-title">Username</h4>
+      <form action="/sign_in" method="POST" class="form-spacing">
+        <input type="text" class="form-control card-text"name="username" placeholder="e.g. Cluck Cluckerton">
+        <div class="button-container">
+          <input type="submit" class="btn btn-outline-secondary" value="Sign In"></input>
+        </div>
+      </form>
+    </div>
+  </div>
+
 <%- include("./partials/footer") %>
