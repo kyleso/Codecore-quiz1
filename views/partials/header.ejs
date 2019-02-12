@@ -24,7 +24,7 @@
                     <% if ( username ) { %>
                             <a class="btn btn-secondary form-inline" href="/clucks/new" role="button">Cluck!</a>
                         <% }  else { %>
-                        <a class="btn btn-secondary form-inline" href="/" role="button">Cluck!</a>
+                            <a class="btn btn-secondary form-inline" href="/sign_in" role="button">Cluck!</a>
                         <% } %>
                         <% if ( username ) { %>
                             <span class="navbar-text mr-2">Signed in as <%= username %></span>
@@ -32,7 +32,7 @@
                                 <button class="btn btn-secondary">Sign Out</button>
                             </form>
                         <% }  else { %>
-                        <a class="btn btn-secondary" href="/" role="button">Sign In</a>
+                        <a class="btn btn-secondary" href="/sign_in" role="button">Sign In</a>
                         <% } %>
                     </div>
                 </div>
