@@ -31,13 +31,13 @@ app.use(cookieParser());
 
 app.use((request, response, next) => {
 	const username = request.cookies.username;
-	response.locals.loggedInUserName = username || '';
+	response.locals.username = username || '';
 	next();
 });
 
 // Routers
-const clucksRouter = require('./routes/clucksRouter');
-app.use('/clucks', clucksRouter);
+// const clucksRouter = require('./routes/clucksRouter');
+// app.use('/clucks', clucksRouter);
 
 const baseRouter = require('./routes/baseRouter');
 app.use('/', baseRouter);
