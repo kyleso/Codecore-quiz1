@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require('method-override');
 const app = express();
+const moment = require('moment');
 
 // View Engine
 app.set('view engine', 'ejs');
@@ -44,8 +45,9 @@ app.use('/clucks', clucksRouter);
 const baseRouter = require('./routes/baseRouter');
 app.use('/', baseRouter);
 
-// Server Setup
+app.locals.moment = moment;
 
+// Server Setup
 const PORT = 4343;
 const HOST = 'localhost'
 app.listen(PORT, HOST, () => {
