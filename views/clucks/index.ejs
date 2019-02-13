@@ -5,7 +5,7 @@
       <div class="card-body">
         <div class="card-title">
           <img class="small-image" src="../../images/userimage.jpg">
-          <p><%= cluck.username %> • <%= cluck.created_at %></p>
+          <p><%= cluck.username %> • <%= moment(cluck.created_at).fromNow() %></p>
         </div>
         <p class="card-text"><%= cluck.content %></p> 
         <% if ( cluck.image_url ) { %>
