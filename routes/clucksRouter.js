@@ -18,8 +18,7 @@ router.post("/", (req, res) => {
       created_at: newCluck.created_at
     })
     .returning("*")
-    .then(clucks => {
-			const [cluck] = clucks;
+    .then(() => {
 			res.redirect(`/clucks/`);
 		});
 });
